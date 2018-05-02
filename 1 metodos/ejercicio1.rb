@@ -2,12 +2,11 @@
 # hint: Debes utilizar 'rubocop'
 # y no obtener errores ni warnings.
 
-def par(x)
-  if x % 2 == 0
-    return true
-  else
-    return false
-  end
+puts "Los números pares son verdadero"
+
+def par(num)
+  return true if num.even?
+  false
 end
 
 puts par(2)

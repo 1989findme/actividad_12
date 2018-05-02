@@ -1,2 +1,36 @@
 # Crear un método que reciba como parámetro dos números enteros positivos
 # e imprima los números pares que existen entre esos dos números.
+
+  def pares (a,b)
+  min = 0
+  max = 0
+  if a < b
+    min = a
+    max = b
+  elsif a > b
+    min = b
+    max = a
+  else
+    if a.even?
+      puts a
+    else
+      puts "No es posible hacer esta operación"
+    end
+    return
+  end
+  muestra_pares(min, max)
+end
+
+def muestra_pares(a, b)
+  (a..b).each do |i|
+    puts i if i.even?
+  end
+end
+
+puts "Veremos los números pares que existen entre dos números enteros positivos"
+puts "Escribe tu primer número:"
+a = gets.chomp.to_i
+puts "Escribe el segundo número:"
+b = gets.chomp.to_i
+puts " "
+pares(a, b)

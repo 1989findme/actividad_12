@@ -1,15 +1,16 @@
 # El siguiente programa debería mostrar sí o no, sin embargo muestrar error
 # Se pide identificar el error y corregirlo.
 
+puts "Random: sí o no?"
+
 def random
   result = [true, false].sample
-  puts result
+  return result
 end
 
-if random == true
+x = random
+if x == true
   puts 'sí'
-elsif random == false
+elsif x == false
   puts 'no'
-else
-  puts 'error'
 end

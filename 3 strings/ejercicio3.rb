@@ -6,3 +6,22 @@
 
 a = [1, 2, 3, 9, 12, 31, 'domingo']
 b = %w[lunes martes miércoles jueves viernes sábado domingo]
+
+#1
+print (a + b)
+
+#2
+
+union =[]
+a.each do |e|
+  if !b.include?(e)
+    union << e
+  end
+end
+b.each do |e|
+  if !a.include?(e)
+    union << e
+  end
+end
+
+print union.uniq
